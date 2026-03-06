@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía de Estimulación Infantil 👶✨</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Guía Práctica de Estimulación Infantil 0–4 años 👶✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --fondo-crema: #FDFBF7;
-            --terracota: #E2725B;
-            --verde-naturaleza: #8DA47E;
-            --azul-cielo: #A3C1AD;
-            --texto: #4A4A4A;
+            --terracota-oscuro: #8B3E2F; /* Título más fuerte para legibilidad */
+            --terracota-boton: #E2725B;
+            --verde-profundo: #4A6741;
+            --azul-acentos: #5D8AA8;
+            --texto: #2D3436;
         }
 
         * { box-sizing: border-box; scroll-behavior: smooth; }
@@ -21,150 +22,198 @@
             font-family: 'Nunito', sans-serif; 
             color: var(--texto); 
             background-color: var(--fondo-crema);
-            /* Textura de papel de acuarela */
             background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+            line-height: 1.6;
         }
 
-        /* --- EFECTO PINCELADA (NUEVO) --- */
-        .watercolor-border {
-            /* Crea un borde irregular simulando pincel */
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            border: 8px solid white;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            transition: 0.5s ease;
+        /* Títulos con máxima legibilidad */
+        h1, h2, h3 { 
+            font-family: 'Quicksand', sans-serif; 
+            font-weight: 700; 
+            text-align: center; 
+            color: var(--terracota-oscuro); 
+            margin-bottom: 20px;
         }
 
-        .watercolor-section {
-            background: white;
-            /* Máscara para que el fondo de la sección parezca papel rasgado o pintado */
-            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-            padding: 40px;
-            border: 2px solid var(--azul-cielo);
-        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
 
-        /* --- ICONO OFERTA ADAPTATIVO --- */
+        /* --- ICONO OFERTA ADAPTATIVO (REQUERIDO) --- */
         .sticky-offer {
-            position: fixed;
-            z-index: 9999;
-            background: #D9534F; /* Rojo terracota más llamativo */
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 700;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            position: fixed; z-index: 9999; background: #c92222; color: white;
+            text-align: center; text-decoration: none; font-family: 'Quicksand', sans-serif;
+            font-weight: 700; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         @media (min-width: 769px) {
             .sticky-offer {
                 top: 50%; right: 20px; transform: translateY(-50%);
-                width: 100px; height: 100px; border-radius: 50%;
+                width: 110px; height: 110px; border-radius: 50%;
                 display: flex; align-items: center; justify-content: center;
-                border: 3px solid white; font-size: 0.8rem;
-                animation: pulse 2s infinite;
+                border: 3px solid white; font-size: 0.85rem; line-height: 1.2;
             }
         }
 
         @media (max-width: 768px) {
             .sticky-offer {
-                bottom: 0; left: 0; right: 0;
-                width: 100%; padding: 15px; font-size: 1.1rem;
-                border-top: 3px solid white;
+                bottom: 0; left: 0; right: 0; width: 100%; padding: 15px;
+                font-size: 1.1rem; border-top: 3px solid white;
             }
         }
 
-        @keyframes pulse { 0% { transform: translateY(-50%) scale(1); } 50% { transform: translateY(-50%) scale(1.08); } 100% { transform: translateY(-50%) scale(1); } }
-
-        /* --- SECCIÓN DE REGALOS (ESTRATEGIA MARKETING) --- */
-        .gift-container {
-            margin: 60px 0;
-            position: relative;
+        /* --- HERO: IMPACTO INICIAL --- */
+        .hero {
+            padding: 100px 20px 80px;
+            background: linear-gradient(180deg, #fcece8 0%, var(--fondo-crema) 100%);
             text-align: center;
         }
-
-        .gift-banner {
-            background: var(--terracota);
-            color: white;
-            display: inline-block;
-            padding: 15px 40px;
-            font-family: 'Quicksand', sans-serif;
-            font-size: 1.6rem;
-            font-weight: 700;
-            border-radius: 50px 20px 50px 20px;
-            margin-bottom: -25px;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 10px 20px rgba(226, 114, 91, 0.3);
-        }
-
-        .gift-box-white {
-            background: white;
-            border: 3px solid var(--verde-naturaleza);
-            border-radius: 30px;
-            padding: 50px 20px 30px;
-            position: relative;
-            z-index: 1;
+        .hero h1 { font-size: 3.5rem; line-height: 1.1; color: var(--terracota-oscuro); }
+        .hero-img { 
+            max-width: 600px; width: 100%; margin: 40px 0; 
+            border-radius: 20px; /* Rectangular */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
         /* --- BOTONES --- */
         .cta-btn {
-            background: var(--terracota);
-            color: white; padding: 22px 45px; border-radius: 60px; text-decoration: none;
-            font-weight: 700; font-size: 1.5rem; display: inline-block;
-            transition: 0.3s; border: none; cursor: pointer;
-            box-shadow: 0 10px 0px #b05644; /* Sombra sólida estilo ilustración */
+            background: linear-gradient(45deg, #c92222, #ff3232);
+            color: white; padding: 25px 50px; border-radius: 100px; text-decoration: none;
+            font-weight: 800; font-size: 1.6rem; display: inline-block;
+            box-shadow: 0 15px 30px rgba(201, 34, 34, 0.3); transition: 0.3s; border: none;
         }
-        .cta-btn:hover { transform: translateY(3px); box-shadow: 0 5px 0px #b05644; }
+        .cta-btn:hover { transform: scale(1.05); filter: brightness(1.1); }
 
-        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-        h1 { font-size: 3rem; color: var(--terracota); line-height: 1.1; }
-        h2 { color: var(--verde-naturaleza); font-size: 2.2rem; }
+        /* --- SECCIÓN DE REGALOS (ESTRATÉGICA) --- */
+        .gift-wrapper { margin: 60px 0; text-align: center; }
+        .gift-title { 
+            font-size: 2rem; background: var(--terracota-oscuro); color: white;
+            display: inline-block; padding: 15px 35px; border-radius: 15px;
+            margin-bottom: -20px; position: relative; z-index: 2;
+        }
+        .gift-content {
+            border: 4px dashed var(--terracota-oscuro); background: white;
+            padding: 60px 30px 40px; border-radius: 30px;
+        }
+        .gift-img { width: 100%; max-width: 700px; border-radius: 15px; margin-bottom: 30px; }
+
+        /* --- CUADRÍCULAS --- */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
+        
+        .preview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .preview-card img { width: 100%; border-radius: 10px; border: 1px solid #eee; }
+
+        /* --- CHECKOUT BOX (DISEÑO ORIGINAL) --- */
+        .checkout-box {
+            background: white; max-width: 850px; margin: 60px auto;
+            border-radius: 40px; overflow: hidden; display: flex; flex-wrap: wrap;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.12); border: 2px solid #f0f0f0;
+        }
+        .checkout-info { flex: 1.2; padding: 50px; min-width: 320px; }
+        .checkout-price { 
+            flex: 0.8; padding: 50px; min-width: 320px; background: #F9FAFB; 
+            text-align: center; border-left: 1px solid #eee;
+        }
+        .price-tag { font-size: 4.5rem; font-weight: 800; color: #27ae60; margin: 15px 0; }
+        .old-price { text-decoration: line-through; color: #b2bec3; font-size: 1.4rem; }
+        .offer-badge { background: #c92222; color: white; padding: 8px 20px; border-radius: 50px; font-weight: 700; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .checkout-box { flex-direction: column; }
+            .checkout-price { border-left: none; border-top: 1px solid #eee; }
+        }
     </style>
 </head>
 <body>
 
-    <a href="#comprar" class="sticky-offer">OFERTA DE<br>LANZAMIENTO 🔥</a>
+    <a href="#comprar" class="sticky-offer">OFERTA DE<br>LANZAMIENTO<br>🔥</a>
 
-    <header class="container" style="text-align: center;">
-        <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--azul-cielo); font-weight: 700;">Material exclusivo para mamás y papás</p>
-        <h1>Guía de Estimulación Infantil <br>0–4 años 👶✨</h1>
-        
-        <img src="portada.jpg" class="watercolor-border" style="width: 80%; max-width: 450px; margin: 30px 0;" alt="Portada">
-        
-        <p style="font-size: 1.3rem; line-height: 1.6; max-width: 800px; margin: 0 auto 30px;">
-            No necesitas juguetes caros. Aprende a convertir tu casa en un gimnasio cerebral con solo 15 minutos al día.
-        </p>
-
-        <div class="gift-container">
-            <div class="gift-banner">🎁 ¡REGALOS QUE TE ENCANTARÁN!</div>
-            <div class="gift-box-white">
-                <img src="ebookBonos.png" style="width: 100%; max-width: 550px; margin-bottom: 20px;" alt="Bonos">
-                <p style="font-size: 1.2rem; color: var(--texto); font-weight: 600;">Llévate 3 recursos adicionales GRATIS si ordenas hoy mismo.</p>
-                <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 15px; margin-top: 20px;">
-                    <span style="color: var(--verde-naturaleza);">✔ Kit Imprimible</span>
-                    <span style="color: var(--verde-naturaleza);">✔ Plan 30 Días</span>
-                    <span style="color: var(--verde-naturaleza);">✔ Guía de Errores</span>
-                </div>
+    <header class="hero">
+        <div class="container">
+            <span style="background: var(--azul-acentos); color: white; padding: 8px 25px; border-radius: 50px; font-weight: 700;">✨ ¡MÉTODO COMPROBADO!</span>
+            <h1>Transforma el desarrollo de tu hijo con solo 15 min al día 👶</h1>
+            <p style="font-size: 1.5rem; max-width: 800px; margin: 20px auto; color: #576574;">
+                La guía definitiva para padres que quieren potenciar la inteligencia y motricidad de sus pequeños de 0 a 4 años sin complicaciones.
+            </p>
+            <img src="portada.jpg" class="hero-img" alt="Portada de la guía">
+            <div style="margin-top: 30px;">
+                <a href="#comprar" class="cta-btn">¡SÍ, QUIERO EMPEZAR AHORA! 🚀</a>
+                <p style="margin-top: 15px; font-weight: 600; color: var(--verde-profundo);">✅ Acceso inmediato tras la compra</p>
             </div>
         </div>
-
-        <a href="#comprar" class="cta-btn">¡SÍ, QUIERO TODO POR $13.99! 🚀</a>
     </header>
 
-    <section style="margin-top: 80px;">
-        <div class="container watercolor-section">
-            <h2 style="text-align: center;">Un vistazo al interior... 📖</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
-                <img src="ebookinterna1.png" class="watercolor-border" style="width: 100%;" alt="Página 1">
-                <img src="ebookinterna2.png" class="watercolor-border" style="width: 100%;" alt="Página 2">
-                <img src="ebookinterna3.png" class="watercolor-border" style="width: 100%;" alt="Página 3">
-                <img src="ebookinterna44.png" class="watercolor-border" style="width: 100%;" alt="Página 4">
+    <section class="container">
+        <h2>Lo que tu hijo logrará con esta guía...</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3 style="text-align: left;">🧠 Cognición</h3>
+                <p>Juegos diseñados para despertar la curiosidad y la resolución de problemas desde temprana edad.</p>
+            </div>
+            <div class="card">
+                <h3 style="text-align: left;">🏃 Motricidad</h3>
+                <p>Ejercicios prácticos para fortalecer sus músculos y coordinación de forma divertida.</p>
+            </div>
+            <div class="card">
+                <h3 style="text-align: left;">🗣️ Lenguaje</h3>
+                <p>Estrategias sencillas para estimular sus primeras palabras y su comunicación afectiva.</p>
             </div>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 80px 20px; opacity: 0.6;">
-        <p>Hecho con amor para el futuro de tus pequeños &copy; 2026</p>
+    <section class="container">
+        <div class="gift-wrapper">
+            <div class="gift-title">🎁 ¡REGALOS QUE TE ENCANTARÁN!</div>
+            <div class="gift-content">
+                <img src="ebookBonos.png" class="gift-img" alt="Bonos exclusivos">
+                <h3 style="margin-top: 0;">¡GRATIS solo por hoy!</h3>
+                <p style="font-size: 1.2rem;">Al adquirir la guía, desbloqueas automáticamente estos 3 bonos premium:</p>
+                <div class="grid-3" style="margin-top: 30px;">
+                    <div style="color: var(--terracota-oscuro); font-weight: 700;">Bono 1: Kit Imprimible</div>
+                    <div style="color: var(--terracota-oscuro); font-weight: 700;">Bono 2: Plan de 30 Días</div>
+                    <div style="color: var(--terracota-oscuro); font-weight: 700;">Bono 3: Guía de Errores</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="background: #eef5f9; border-radius: 50px;">
+        <h2>¿Qué encontrarás adentro? 📖👀</h2>
+        <div class="preview-grid">
+            <div class="preview-card"><img src="ebookinterna1.png" alt="Interior 1"><p style="text-align:center; font-weight:700;">Hitos del desarrollo</p></div>
+            <div class="preview-card"><img src="ebookinterna2.png" alt="Interior 2"><p style="text-align:center; font-weight:700;">Actividades paso a paso</p></div>
+            <div class="preview-card"><img src="ebookinterna3.png" alt="Interior 3"><p style="text-align:center; font-weight:700;">Material sensorial</p></div>
+            <div class="preview-card"><img src="ebookinterna44.png" alt="Interior 4"><p style="text-align:center; font-weight:700;">Juego en casa</p></div>
+        </div>
+    </section>
+
+    <section id="comprar" class="container">
+        <div class="checkout-box">
+            <div class="checkout-info">
+                <h2 style="text-align: left; margin-bottom: 20px;">¡Comienza la aventura hoy! 👨‍👩‍👧‍👦</h2>
+                <ul style="list-style: none; padding: 0; color: #576574; font-size: 1.1rem; line-height: 2.2;">
+                    <li>✅ <b>Guía Completa</b> de Estimulación 0-4 años</li>
+                    <li>✅ <b>Bono:</b> Kit Imprimible de Actividades</li>
+                    <li>✅ <b>Bono:</b> Guía de Errores Comunes</li>
+                    <li>✅ <b>Bono:</b> Plan de Acción de 30 días</li>
+                    <li>✅ Acceso de por vida y multidispositivo</li>
+                </ul>
+            </div>
+            <div class="checkout-price">
+                <div class="offer-badge">¡70% DE DESCUENTO HOY!</div>
+                <p class="old-price">Antes $47.00 USD</p>
+                <div class="price-tag">$13.99</div>
+                <a href="TU_LINK_DE_PAGO" class="cta-btn" style="font-size: 1.3rem; width: 100%;">¡LO QUIERO TODO! 🛒</a>
+                <div style="margin-top: 20px; font-size: 0.85rem; color: #7f8c8d; display: flex; justify-content: center; gap: 15px;">
+                    <span>🛡️ Pago Seguro</span>
+                    <span>⭐ Garantía 7 días</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 60px; color: #95a5a6; font-size: 0.9rem;">
+        <p>Hecho con ❤️ para el futuro de tus pequeños. &copy; 2026</p>
     </footer>
 
 </body>

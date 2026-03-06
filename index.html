@@ -73,7 +73,7 @@
         }
         .cta-btn:hover { transform: scale(1.05); }
 
-        /* --- SECCIÓN POR QUÉ ADQUIRIRLO (EXTENDIDA) --- */
+        /* --- SECCIÓN POR QUÉ ADQUIRIRLO (6 PUNTOS) --- */
         .why-buy { background: white; border-radius: 50px; padding: 60px 40px; margin: 40px 0; border: 2px solid #f0f0f0; }
         .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px; }
         .why-item { text-align: center; padding: 20px; }
@@ -85,10 +85,16 @@
         .preview-card { background: white; padding: 15px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; }
         .preview-card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
 
+        /* --- SECCIÓN BONOS (ESTRATÉGICA) --- */
+        .gift-wrapper { margin: 80px 0; text-align: center; }
+        .gift-title { font-size: 2rem; background: var(--terracota-oscuro); color: white; display: inline-block; padding: 15px 35px; border-radius: 15px; margin-bottom: -20px; position: relative; z-index: 2; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .gift-content { border: 4px dashed var(--terracota-oscuro); background: white; padding: 60px 30px 40px; border-radius: 30px; }
+        .gift-img { width: 100%; max-width: 650px; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
         /* --- FAQ --- */
         .faq-container { max-width: 850px; margin: 40px auto; }
         .faq-item { background: white; margin-bottom: 15px; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .faq-question { padding: 20px 25px; font-weight: 700; display: flex; align-items: center; color: var(--terracota-oscuro); cursor: pointer; }
+        .faq-question { padding: 20px 25px; font-weight: 700; display: flex; align-items: center; color: var(--terracota-oscuro); cursor: default; }
         .faq-answer { padding: 0 25px 20px 25px; color: #576574; }
 
         /* --- CHECKOUT --- */
@@ -104,6 +110,7 @@
         .offer-badge { background: #c92222; color: white; padding: 8px 20px; border-radius: 50px; font-weight: 700; }
 
         @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
             .checkout-box { flex-direction: column-reverse; }
             .checkout-price { border-right: none; border-bottom: 1px solid #eee; }
         }
@@ -127,36 +134,12 @@
         <div class="why-buy">
             <h2>¿Por qué esta es la mejor inversión para tu familia? 🏆</h2>
             <div class="why-grid">
-                <div class="why-item">
-                    <span>⏳</span>
-                    <h3>Ahorra Meses de Tiempo</h3>
-                    <p>No pierdas horas buscando en blogs. Todo lo que necesitas está organizado y listo para aplicar hoy mismo.</p>
-                </div>
-                <div class="why-item">
-                    <span>👩‍⚕️</span>
-                    <h3>Método Validado</h3>
-                    <p>Actividades basadas en hitos del desarrollo real, respetando el ritmo natural de cada niño sin presiones.</p>
-                </div>
-                <div class="why-item">
-                    <span>♻️</span>
-                    <h3>Acceso para Siempre</h3>
-                    <p>Descárgalo y guárdalo en todos tus dispositivos. Úsalo con tu primer hijo, y consúltalo de nuevo con los que vengan.</p>
-                </div>
-                <div class="why-item">
-                    <span>💸</span>
-                    <h3>Menos que un Juguete</h3>
-                    <p>Por una fracción del costo de un juguete plástico que durará meses, inviertes en su cerebro para toda la vida.</p>
-                </div>
-                <div class="why-item">
-                    <span>🏠</span>
-                    <h3>Sin Materiales Caros</h3>
-                    <p>Aprenderás a usar lo que ya tienes en casa (toallas, cucharas, cojines) para crear un gimnasio cerebral.</p>
-                </div>
-                <div class="why-item">
-                    <span>🛡️</span>
-                    <h3>Cero Riesgos</h3>
-                    <p>Tu compra está protegida. Si el material no es lo que esperabas, te devolvemos el dinero. Así de seguros estamos.</p>
-                </div>
+                <div class="why-item"><span>⏳</span><h3>Ahorra Tiempo</h3><p>Todo lo que necesitas está organizado y listo para aplicar hoy mismo sin buscar en mil blogs.</p></div>
+                <div class="why-item"><span>👩‍⚕️</span><h3>Método Validado</h3><p>Actividades basadas en hitos reales, respetando el ritmo natural de cada niño sin presiones.</p></div>
+                <div class="why-item"><span>♻️</span><h3>Acceso de por vida</h3><p>Descárgalo una vez y consúltalo cuantas veces quieras en todos tus dispositivos.</p></div>
+                <div class="why-item"><span>💸</span><h3>Precio Increíble</h3><p>Por menos de lo que cuesta un juguete plástico, aseguras el desarrollo cerebral de tu hijo.</p></div>
+                <div class="why-item"><span>🏠</span><h3>Cosas de Casa</h3><p>Aprenderás a usar elementos cotidianos para crear un gimnasio cerebral divertido.</p></div>
+                <div class="why-item"><span>🛡️</span><h3>Garantía Total</h3><p>Si el material no es lo que esperabas, te devolvemos tu dinero. Sin preguntas.</p></div>
             </div>
         </div>
     </section>
@@ -174,23 +157,35 @@
     </section>
 
     <section class="container">
+        <div class="gift-wrapper">
+            <div class="gift-title">🎁 ¡REGALOS QUE TE ENCANTARÁN!</div>
+            <div class="gift-content">
+                <img src="ebookBonos.png" class="gift-img" alt="Bonos exclusivos">
+                <h3>¡Valorados en más de $30 USD, hoy GRATIS!</h3>
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Al adquirir la guía hoy mismo, incluimos estos 3 recursos premium para complementar la estimulación de tu pequeño:</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; font-weight: 700; color: var(--terracota-oscuro);">
+                    <span>✔ Kit Imprimible</span>
+                    <span>✔ Plan de 30 Días</span>
+                    <span>✔ Guía de Errores Comunes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
         <h2>Preguntas Frecuentes 🤔</h2>
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question">👶 ¿Para qué edades es la guía?</div>
-                <div class="faq-answer">La guía está diseñada para niños de 0 a 4 años, organizada por rangos de edad específicos.</div>
+                <div class="faq-answer">La guía está diseñada para niños de 0 a 4 años, organizada por rangos de edad.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">📱 ¿En qué formato viene?</div>
-                <div class="faq-answer">Es un ebook en formato PDF descargable inmediatamente después de la compra para leer en celular, PC o tablet.</div>
+                <div class="faq-answer">Es un ebook en formato PDF descargable inmediatamente después de la compra.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">🛡️ ¿Tiene garantía?</div>
-                <div class="faq-answer">Sí. Tienes 7 días para solicitar un reembolso completo si no estás satisfecha con el contenido.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">⚡ ¿Cómo recibo el material?</div>
-                <div class="faq-answer">Una vez realizado el pago, recibirás un correo electrónico automático con el enlace de descarga instantánea.</div>
+                <div class="faq-answer">Sí. Tienes 7 días para solicitar un reembolso completo si no estás satisfecho.</div>
             </div>
         </div>
     </section>
@@ -202,15 +197,16 @@
                 <p class="old-price">Antes $47.00 USD</p>
                 <div class="price-tag">$13.99</div>
                 <a href="TU_LINK_DE_PAGO" class="cta-btn" style="width: 100%;">¡COMPRAR AHORA!</a>
+                <p style="margin-top: 20px; font-size: 0.8rem; color: #7f8c8d;">🔒 Transacción 100% Protegida</p>
             </div>
             <div class="checkout-info">
                 <h2 style="text-align: left;">Tu paquete incluye:</h2>
                 <ul style="list-style: none; padding: 0; color: #576574; font-size: 1.1rem; line-height: 2;">
-                    <li>✅ Guía Completa 0-4 años</li>
-                    <li>✅ <b>BONO:</b> Kit Imprimible</li>
+                    <li>✅ Guía Completa de Estimulación</li>
+                    <li>✅ <b>BONO:</b> Kit Imprimible de Actividades</li>
                     <li>✅ <b>BONO:</b> Guía Errores Comunes</li>
-                    <li>✅ <b>BONO:</b> Plan 30 días</li>
-                    <li>✅ Acceso de por vida</li>
+                    <li>✅ <b>BONO:</b> Plan de Acción 30 días</li>
+                    <li>✅ Acceso de por vida e inmediato</li>
                 </ul>
             </div>
         </div>

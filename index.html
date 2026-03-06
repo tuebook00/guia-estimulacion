@@ -34,7 +34,7 @@
             margin-bottom: 20px;
         }
 
-        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
 
         /* --- STICKY MOBILE BANNER --- */
         .sticky-offer {
@@ -69,49 +69,42 @@
             background: linear-gradient(45deg, #c92222, #ff3232);
             color: white; padding: 25px 50px; border-radius: 100px; text-decoration: none;
             font-weight: 800; font-size: 1.6rem; display: inline-block;
-            box-shadow: 0 15px 30px rgba(201, 34, 34, 0.3); transition: 0.3s; border: none;
+            box-shadow: 0 15px 30px rgba(201, 34, 34, 0.3); transition: 0.3s; border: none; cursor: pointer;
         }
         .cta-btn:hover { transform: scale(1.05); }
 
-        /* --- SECCIÓN POR QUÉ ADQUIRIRLO (MARKETING) --- */
+        /* --- SECCIÓN POR QUÉ ADQUIRIRLO (EXTENDIDA) --- */
         .why-buy { background: white; border-radius: 50px; padding: 60px 40px; margin: 40px 0; border: 2px solid #f0f0f0; }
-        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
-        .why-item { text-align: center; }
-        .why-item span { font-size: 3rem; display: block; margin-bottom: 15px; }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px; }
+        .why-item { text-align: center; padding: 20px; }
+        .why-item span { font-size: 3.5rem; display: block; margin-bottom: 15px; }
 
-        /* --- VISTAZO INTERIOR MEJORADO --- */
+        /* --- VISTAZO INTERIOR --- */
         .preview-section { background: #E3F2FD; border-radius: 50px; padding: 60px 20px; }
         .preview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin-top: 40px; }
         .preview-card { background: white; padding: 15px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; }
         .preview-card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
-        .preview-card span { font-size: 1.5rem; display: block; }
 
-        /* --- SECCIÓN REGALOS --- */
-        .gift-wrapper { margin: 60px 0; text-align: center; }
-        .gift-title { font-size: 2rem; background: var(--terracota-oscuro); color: white; display: inline-block; padding: 15px 35px; border-radius: 15px; margin-bottom: -20px; position: relative; z-index: 2; }
-        .gift-content { border: 4px dashed var(--terracota-oscuro); background: white; padding: 60px 30px 40px; border-radius: 30px; }
-        .gift-img { width: 100%; max-width: 600px; border-radius: 15px; margin-bottom: 30px; }
+        /* --- FAQ --- */
+        .faq-container { max-width: 850px; margin: 40px auto; }
+        .faq-item { background: white; margin-bottom: 15px; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .faq-question { padding: 20px 25px; font-weight: 700; display: flex; align-items: center; color: var(--terracota-oscuro); cursor: pointer; }
+        .faq-answer { padding: 0 25px 20px 25px; color: #576574; }
 
-        /* --- CHECKOUT (ORDEN INVERTIDO: PRECIO PRIMERO) --- */
+        /* --- CHECKOUT --- */
         .checkout-box {
-            background: white; max-width: 850px; margin: 60px auto;
+            background: white; max-width: 900px; margin: 60px auto;
             border-radius: 40px; overflow: hidden; display: flex; flex-wrap: wrap;
             box-shadow: 0 40px 80px rgba(0,0,0,0.12); border: 2px solid #f0f0f0;
         }
-        /* El precio ahora va a la izquierda (primero en lectura) */
-        .checkout-price { 
-            flex: 1; padding: 50px; min-width: 320px; background: #F9FAFB; 
-            text-align: center; border-right: 1px solid #eee;
-        }
+        .checkout-price { flex: 1; padding: 50px; min-width: 320px; background: #F9FAFB; text-align: center; border-right: 1px solid #eee; }
         .checkout-info { flex: 1.2; padding: 50px; min-width: 320px; }
-        
         .price-tag { font-size: 4.5rem; font-weight: 800; color: #27ae60; margin: 15px 0; }
         .old-price { text-decoration: line-through; color: #b2bec3; font-size: 1.4rem; }
         .offer-badge { background: #c92222; color: white; padding: 8px 20px; border-radius: 50px; font-weight: 700; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .checkout-box { flex-direction: column-reverse; } /* En móvil el precio queda arriba */
+            .checkout-box { flex-direction: column-reverse; }
             .checkout-price { border-right: none; border-bottom: 1px solid #eee; }
         }
     </style>
@@ -126,29 +119,9 @@
             <h1>¡Deja de adivinar cómo estimular a tu bebé! 👶✨</h1>
             <p style="font-size: 1.4rem; max-width: 750px; margin: 20px auto; color: #576574;">Descubre el paso a paso exacto para fomentar el desarrollo de tu pequeño sin estrés y con amor.</p>
             <img src="portada.jpg" class="hero-img" alt="Portada de la guía">
-            <div style="margin-top: 30px;">
-                <a href="#comprar" class="cta-btn">¡DESBLOQUEAR ACCESO AHORA! 🚀</a>
-            </div>
+            <div><a href="#comprar" class="cta-btn">¡DESBLOQUEAR ACCESO AHORA! 🚀</a></div>
         </div>
     </header>
-
-    <section class="container">
-        <h2>Lo que tu hijo logrará con esta guía...</h2>
-        <div class="grid-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-            <div style="background: white; padding: 30px; border-radius: 20px;">
-                <h3>🧠 Inteligencia</h3>
-                <p>Potencia las conexiones neuronales mediante el juego sensorial estratégico.</p>
-            </div>
-            <div style="background: white; padding: 30px; border-radius: 20px;">
-                <h3>💪 Seguridad</h3>
-                <p>Ayúdalo a ganar confianza en sus movimientos y equilibrio físico.</p>
-            </div>
-            <div style="background: white; padding: 30px; border-radius: 20px;">
-                <h3>❤️ Vínculo</h3>
-                <p>Crea momentos inolvidables y una conexión emocional profunda contigo.</p>
-            </div>
-        </div>
-    </section>
 
     <section class="container">
         <div class="why-buy">
@@ -156,23 +129,33 @@
             <div class="why-grid">
                 <div class="why-item">
                     <span>⏳</span>
-                    <h3>Ahorra Tiempo</h3>
-                    <p>No pierdas horas buscando en internet. Todo lo que necesitas está organizado aquí.</p>
+                    <h3>Ahorra Meses de Tiempo</h3>
+                    <p>No pierdas horas buscando en blogs. Todo lo que necesitas está organizado y listo para aplicar hoy mismo.</p>
                 </div>
                 <div class="why-item">
                     <span>👩‍⚕️</span>
-                    <h3>Basado en Expertos</h3>
-                    <p>Actividades validadas que respetan el ritmo natural de crecimiento de cada niño.</p>
+                    <h3>Método Validado</h3>
+                    <p>Actividades basadas en hitos del desarrollo real, respetando el ritmo natural de cada niño sin presiones.</p>
                 </div>
                 <div class="why-item">
                     <span>♻️</span>
-                    <h3>Para siempre</h3>
-                    <p>Descárgalo una vez y consúltalo cuantas veces quieras en tu celular o tablet.</p>
+                    <h3>Acceso para Siempre</h3>
+                    <p>Descárgalo y guárdalo en todos tus dispositivos. Úsalo con tu primer hijo, y consúltalo de nuevo con los que vengan.</p>
                 </div>
                 <div class="why-item">
                     <span>💸</span>
-                    <h3>Precio Simbólico</h3>
-                    <p>Por menos de lo que cuesta una salida a comer, aseguras el futuro de tu hijo.</p>
+                    <h3>Menos que un Juguete</h3>
+                    <p>Por una fracción del costo de un juguete plástico que durará meses, inviertes en su cerebro para toda la vida.</p>
+                </div>
+                <div class="why-item">
+                    <span>🏠</span>
+                    <h3>Sin Materiales Caros</h3>
+                    <p>Aprenderás a usar lo que ya tienes en casa (toallas, cucharas, cojines) para crear un gimnasio cerebral.</p>
+                </div>
+                <div class="why-item">
+                    <span>🛡️</span>
+                    <h3>Cero Riesgos</h3>
+                    <p>Tu compra está protegida. Si el material no es lo que esperabas, te devolvemos el dinero. Así de seguros estamos.</p>
                 </div>
             </div>
         </div>
@@ -181,39 +164,33 @@
     <section class="preview-section">
         <div class="container">
             <h2>¿Qué encontrarás adentro? 📖👀</h2>
-            <p style="text-align: center;">Contenido visual y fácil de digerir para padres ocupados.</p>
             <div class="preview-grid">
-                <div class="preview-card">
-                    <span>📍</span>
-                    <img src="ebookinterna1.png" alt="Interior 1">
-                    <p><b>Hitos clave:</b> Sabe qué esperar mes a mes.</p>
-                </div>
-                <div class="preview-card">
-                    <span>🎨</span>
-                    <img src="ebookinterna2.png" alt="Interior 2">
-                    <p><b>Actividades:</b> Guías visuales de juego.</p>
-                </div>
-                <div class="preview-card">
-                    <span>🏠</span>
-                    <img src="ebookinterna3.png" alt="Interior 3">
-                    <p><b>En casa:</b> Usa elementos cotidianos.</p>
-                </div>
-                <div class="preview-card">
-                    <span>🌟</span>
-                    <img src="ebookinterna44.png" alt="Interior 4">
-                    <p><b>Tips extra:</b> Consejos de crianza positiva.</p>
-                </div>
+                <div class="preview-card"><span>📍</span><img src="ebookinterna1.png" alt="Interior 1"><p><b>Hitos de Desarrollo</b></p></div>
+                <div class="preview-card"><span>🎨</span><img src="ebookinterna2.png" alt="Interior 2"><p><b>Guías de Juego</b></p></div>
+                <div class="preview-card"><span>🏠</span><img src="ebookinterna3.png" alt="Interior 3"><p><b>Actividades en Casa</b></p></div>
+                <div class="preview-card"><span>🌟</span><img src="ebookinterna44.png" alt="Interior 4"><p><b>Consejos de Expertos</b></p></div>
             </div>
         </div>
     </section>
 
     <section class="container">
-        <div class="gift-wrapper">
-            <div class="gift-title">🎁 ¡REGALOS QUE TE ENCANTARÁN!</div>
-            <div class="gift-content">
-                <img src="ebookBonos.png" class="gift-img" alt="Bonos">
-                <h3>¡Valorado en más de $30 USD, hoy GRATIS!</h3>
-                <p>Al comprar hoy te llevas el Kit Imprimible, el Plan de 30 días y la Guía de Errores.</p>
+        <h2>Preguntas Frecuentes 🤔</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">👶 ¿Para qué edades es la guía?</div>
+                <div class="faq-answer">La guía está diseñada para niños de 0 a 4 años, organizada por rangos de edad específicos.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">📱 ¿En qué formato viene?</div>
+                <div class="faq-answer">Es un ebook en formato PDF descargable inmediatamente después de la compra para leer en celular, PC o tablet.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">🛡️ ¿Tiene garantía?</div>
+                <div class="faq-answer">Sí. Tienes 7 días para solicitar un reembolso completo si no estás satisfecha con el contenido.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">⚡ ¿Cómo recibo el material?</div>
+                <div class="faq-answer">Una vez realizado el pago, recibirás un correo electrónico automático con el enlace de descarga instantánea.</div>
             </div>
         </div>
     </section>
@@ -221,20 +198,19 @@
     <section id="comprar" class="container">
         <div class="checkout-box">
             <div class="checkout-price">
-                <div class="offer-badge">¡OFERTA DE LANZAMIENTO!</div>
+                <div class="offer-badge">¡OFERTA DE HOY!</div>
                 <p class="old-price">Antes $47.00 USD</p>
                 <div class="price-tag">$13.99</div>
-                <a href="TU_LINK_DE_PAGO" class="cta-btn" style="font-size: 1.3rem; width: 100%;">¡LO QUIERO YA! 🛒</a>
-                <p style="margin-top: 20px; font-size: 0.8rem; color: #7f8c8d;">🔒 Transacción 100% Protegida</p>
+                <a href="TU_LINK_DE_PAGO" class="cta-btn" style="width: 100%;">¡COMPRAR AHORA!</a>
             </div>
             <div class="checkout-info">
-                <h2 style="text-align: left; margin-bottom: 20px;">Tu paquete incluye:</h2>
+                <h2 style="text-align: left;">Tu paquete incluye:</h2>
                 <ul style="list-style: none; padding: 0; color: #576574; font-size: 1.1rem; line-height: 2;">
-                    <li>✅ Guía Completa de Estimulación</li>
+                    <li>✅ Guía Completa 0-4 años</li>
                     <li>✅ <b>BONO:</b> Kit Imprimible</li>
                     <li>✅ <b>BONO:</b> Guía Errores Comunes</li>
-                    <li>✅ <b>BONO:</b> Plan de Acción 30 días</li>
-                    <li>✅ Certificado de Garantía 7 días</li>
+                    <li>✅ <b>BONO:</b> Plan 30 días</li>
+                    <li>✅ Acceso de por vida</li>
                 </ul>
             </div>
         </div>

@@ -1,265 +1,262 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía práctica de estimulación infantil 0–4 años 👶✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-cielo: #E3F2FD;
+            --azul-fuerte: #1e3799;
+            --rojo-llamativo: #c92222; 
+            --rojo-brillante: #ff3232; 
+            --verde-menta: #E8F5E9;
+            --lavanda: #F3E5F5;
+            --amarillo-pastel: #FFF9C4;
+            --texto: #2D3436;
+        }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { 
+            margin: 0; 
+            font-family: 'Nunito', sans-serif; 
+            color: var(--texto); 
+            background-color: #F7FBFF;
+        }
+        
+        h1, h2, h3 { font-family: 'Quicksand', sans-serif; font-weight: 700; text-align: center; color: var(--azul-fuerte); }
 
-<title>Guía práctica de estimulación infantil 0-4 años</title>
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
 
-<style>
+        /* --- GLOBO FLOTANTE --- */
+        .sticky-offer {
+            position: fixed; top: 50%; right: 20px; transform: translateY(-50%); z-index: 9999;
+            background: linear-gradient(135deg, var(--rojo-llamativo), var(--rojo-brillante));
+            color: white; padding: 15px; border-radius: 50%; width: 105px; height: 105px;
+            display: flex; align-items: center; justify-content: center; text-align: center;
+            font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.85rem;
+            box-shadow: 0 10px 30px rgba(201, 34, 34, 0.4); animation: floating 3s ease-in-out infinite;
+            text-decoration: none; border: 3px solid white;
+        }
+        @keyframes floating { 0%, 100% { transform: translateY(-50%) scale(1); } 50% { transform: translateY(-55%) scale(1.05); } }
 
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f4f6fb;
-color:#333;
-}
+        /* --- SECCIONES --- */
+        section { padding: 60px 0; }
+        .bg-verde { background-color: var(--verde-menta); border-radius: 50px; }
+        .bg-lavanda { background-color: var(--lavanda); border-radius: 50px; }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:20px;
-}
+        /* --- HERO --- */
+        .hero { background: linear-gradient(180deg, #B3E5FC 0%, #ffffff 100%); padding: 100px 20px 60px; text-align: center; }
+        .hero h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; }
+        .hero-img { max-width: 550px; width: 100%; margin: 30px 0; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15)); animation: heroFloat 4s ease-in-out infinite; }
+        @keyframes heroFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
 
-.hero{
-background:white;
-padding:40px;
-border-radius:12px;
-text-align:center;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-}
+        /* --- BOTONES --- */
+        .cta-btn {
+            background: linear-gradient(45deg, var(--rojo-llamativo), var(--rojo-brillante));
+            color: white; padding: 25px 50px; border-radius: 100px; text-decoration: none;
+            font-weight: 700; font-size: 1.6rem; display: inline-block;
+            box-shadow: 0 15px 30px rgba(201, 34, 34, 0.3); width: 100%; transition: 0.3s; border: none; cursor: pointer;
+        }
+        .cta-btn:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(201, 34, 34, 0.5); filter: brightness(1.1); }
 
-h1{
-font-size:32px;
-margin-bottom:15px;
-}
+        /* --- VISTAZO INTERIOR (NUEVO) --- */
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .preview-card {
+            background: white;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            text-align: center;
+        }
+        .preview-card:hover { transform: translateY(-10px); }
+        .preview-card img { width: 100%; border-radius: 10px; border: 1px solid #eee; }
+        .preview-card p { font-weight: 700; color: var(--azul-fuerte); margin-top: 10px; font-size: 0.9rem; }
 
-.subtitle{
-font-size:18px;
-color:#555;
-margin-bottom:25px;
-}
+        /* --- BONUS BOX --- */
+        .bonus-section { border: 4px dashed var(--rojo-llamativo); background: white; border-radius: 40px; padding: 40px; margin-top: 30px; }
+        .bonus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; }
+        .bonus-item h4 { color: var(--rojo-llamativo); margin-bottom: 5px; }
 
-.hero img{
-width:100%;
-border-radius:10px;
-margin-top:20px;
-}
+        /* --- FAQ --- */
+        .faq-container { max-width: 800px; margin: 40px auto; }
+        .faq-item { background: white; margin-bottom: 15px; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .faq-question { padding: 20px 25px; font-weight: 700; display: flex; align-items: center; color: var(--azul-fuerte); }
+        .faq-answer { padding: 0 25px 20px 25px; color: #576574; font-size: 1rem; line-height: 1.6; }
 
-.button{
-display:inline-block;
-margin-top:25px;
-background:#ff6a00;
-color:white;
-padding:16px 30px;
-font-size:18px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
+        /* --- REDISEÑO PRECIO FINAL --- */
+        .checkout-box {
+            background: white;
+            max-width: 800px;
+            margin: 60px auto;
+            border-radius: 40px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.12);
+            border: 2px solid #f0f0f0;
+        }
+        .checkout-info { flex: 1; padding: 50px; min-width: 300px; background: #fff; }
+        .checkout-price { 
+            flex: 1; 
+            padding: 50px; 
+            min-width: 300px; 
+            background: #F9FAFB; 
+            text-align: center; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center;
+            border-left: 1px solid #eee;
+        }
+        .price-tag { font-size: 4.5rem; font-weight: 800; color: #27ae60; line-height: 1; margin: 15px 0; }
+        .old-price { text-decoration: line-through; color: #b2bec3; font-size: 1.4rem; }
+        .offer-badge { 
+            background: var(--rojo-llamativo); color: white; padding: 5px 15px; 
+            border-radius: 50px; font-weight: 700; font-size: 0.9rem; display: inline-block;
+            margin-bottom: 10px;
+        }
 
-.button:hover{
-background:#e55e00;
-}
-
-.section{
-background:white;
-margin-top:30px;
-padding:35px;
-border-radius:12px;
-box-shadow:0 6px 20px rgba(0,0,0,0.07);
-}
-
-.section img{
-width:100%;
-border-radius:10px;
-margin:20px 0;
-}
-
-.benefits{
-list-style:none;
-padding:0;
-font-size:18px;
-}
-
-.benefits li{
-margin:12px 0;
-}
-
-.testimonials{
-background:#fff5ed;
-padding:25px;
-border-radius:10px;
-margin-top:15px;
-}
-
-.testimonial{
-margin-bottom:15px;
-}
-
-.cta{
-text-align:center;
-margin-top:30px;
-}
-
-.guarantee{
-background:#eaf7ef;
-padding:20px;
-border-radius:10px;
-text-align:center;
-margin-top:20px;
-}
-
-.footer{
-text-align:center;
-font-size:13px;
-color:#888;
-margin-top:40px;
-}
-
-</style>
-
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .checkout-box { flex-direction: column; }
+            .checkout-price { border-left: none; border-top: 1px solid #eee; }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
-
-<div class="hero">
-
-<h1>
-Guía práctica de estimulación infantil 0-4 años
-</h1>
-
-<p class="subtitle">
-Actividades por edades + plan estructurado de 30 días para potenciar el desarrollo de tu hijo desde casa
-</p>
-
-<img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28">
-
-<p>
-
-Descubre actividades simples que puedes hacer en casa para estimular el desarrollo cognitivo, motor y emocional de tu hijo durante sus primeros años de vida.
-
-</p>
-
-<a href="TU_LINK_HOTMART" class="button">
-VER LA GUÍA COMPLETA
-</a>
-
-</div>
-
-
-
-<div class="section">
-
-<h2>¿Qué incluye esta guía?</h2>
-
-<img src="https://images.unsplash.com/photo-1604881987922-6f8d3c2c932a">
-
-<ul class="benefits">
-
-<li>✔ Actividades específicas por edades (0-1, 1-2, 2-3 y 3-4 años)</li>
-
-<li>✔ Juegos simples que estimulan el desarrollo del cerebro</li>
-
-<li>✔ Ejercicios para mejorar lenguaje y coordinación</li>
-
-<li>✔ Plan estructurado de estimulación de 30 días</li>
-
-<li>✔ Actividades fáciles que puedes aplicar en casa</li>
-
-</ul>
-
-</div>
-
-
-
-<div class="section">
-
-<h2>Por qué es importante la estimulación temprana</h2>
-
-<img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9">
-
-<p>
-
-Durante los primeros años de vida el cerebro infantil se desarrolla a gran velocidad.  
-La estimulación adecuada ayuda a fortalecer habilidades cognitivas, emocionales y motoras que serán clave para su aprendizaje futuro.
-
-</p>
-
-</div>
-
-
-
-<div class="section">
-
-<h2>Opiniones de padres</h2>
-
-<div class="testimonials">
-
-<div class="testimonial">
-
-⭐⭐⭐⭐⭐  
-“Las actividades son muy fáciles y a mi hija le encantan.”
-
-</div>
-
-<div class="testimonial">
-
-⭐⭐⭐⭐⭐  
-“Ahora tenemos juegos educativos para hacer cada día.”
-
-</div>
-
-<div class="testimonial">
-
-⭐⭐⭐⭐⭐  
-“Una guía clara y práctica para estimular a los niños.”
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="section">
-
-<div class="guarantee">
-
-<h3>Garantía de satisfacción</h3>
-
-<p>
-
-Si la guía no cumple tus expectativas, puedes solicitar la devolución dentro del periodo de garantía.
-
-</p>
-
-</div>
-
-<div class="cta">
-
-<a href="TU_LINK_HOTMART" class="button">
-QUIERO ACCEDER A LA GUÍA
-</a>
-
-</div>
-
-</div>
-
-
-<div class="footer">
-
-Contenido educativo para padres.  
-Los resultados pueden variar según cada niño.
-
-</div>
-
-</div>
+    <a href="#comprar" class="sticky-offer">OFERTA DE<br>LANZAMIENTO<br>🔥</a>
+
+    <header class="hero">
+        <div class="container">
+            <span style="background: white; padding: 8px 20px; border-radius: 50px; font-weight: 700; color: var(--rojo-llamativo); box-shadow: 0 5px 15px rgba(0,0,0,0.05);">🧸 RECURSOS EXCLUSIVOS</span>
+            <h1>Guía práctica de estimulación infantil 0–4 años 👶✨</h1>
+            <p style="font-size: 1.4rem; color: #576574;">¡Dale a tu hijo el mejor comienzo! Descubre cómo potenciar su cerebro mientras juegan juntos en casa.</p>
+            <img src="portada.jpg" class="hero-img" alt="Portada de la guía">
+            <div style="margin-top: 20px;">
+                <a href="#comprar" class="cta-btn" style="max-width: 450px;">¡SÍ, LA QUIERO YA! 🚀</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-verde">
+        <div class="container">
+            <h2>¿Por qué esta guía es mágica? ✨</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div style="background: white; padding: 40px; border-radius: 40px; text-align: center;">
+                    <span style="font-size: 4rem;">🧩</span>
+                    <h3>Juego con propósito real</h3>
+                    <p>Estimula áreas clave: sensorial, motor, cognitivo y lenguaje. 🎯</p>
+                </div>
+                <div style="background: white; padding: 40px; border-radius: 40px; text-align: center;">
+                    <span style="font-size: 4rem;">🎨</span>
+                    <h3>Menos pantallas, más conexión</h3>
+                    <p>Fomenta el aprendizaje activo y el vínculo emocional real. ❤️</p>
+                </div>
+                <div style="background: white; padding: 40px; border-radius: 40px; text-align: center;">
+                    <span style="font-size: 4rem;">📚</span>
+                    <h3>Guía clara y práctica</h3>
+                    <p>Pasos detallados para aplicar en solo 15 minutos al día. ⏰</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>¡Échale un vistazo por dentro! 📖👀</h2>
+            <p style="text-align: center; color: #636e72;">Actividades coloridas, fáciles de seguir y diseñadas por expertos.</p>
+            <div class="preview-grid">
+                <div class="preview-card">
+                    <img src="interior1.jpg" alt="Interior 1">
+                    <p>Hitos del desarrollo</p>
+                </div>
+                <div class="preview-card">
+                    <img src="interior2.jpg" alt="Interior 2">
+                    <p>Ejercicios Prácticos</p>
+                </div>
+                <div class="preview-card">
+                    <img src="interior3.jpg" alt="Interior 3">
+                    <p>Material Sensorial</p>
+                </div>
+                <div class="preview-card">
+                    <img src="interior4.jpg" alt="Interior 4">
+                    <p>Juego en Casa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-lavanda">
+        <div class="container">
+            <h2 style="margin-bottom: 10px;">🎁 ¡REGALOS QUE TE ENCANTARÁN!</h2>
+            <p style="text-align: center;">Si adquieres la guía hoy, estos 3 bonos son tuyos GRATIS:</p>
+            <div class="bonus-section">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <img src="bonos.jpg" style="width: 100%; max-width: 800px; border-radius: 20px;" alt="Bonos exclusivos">
+                </div>
+                <div class="bonus-grid">
+                    <div class="bonus-item"><h4>Bono 1 📑</h4><strong>Kit imprimible</strong></div>
+                    <div class="bonus-item"><h4>Bono 2 ⚠️</h4><strong>Errores comunes</strong></div>
+                    <div class="bonus-item"><h4>Bono 3 📅</h4><strong>Plan 30 días</strong></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Preguntas Frecuentes 🤔</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question"><span style="margin-right: 15px;">👶</span> ¿Para qué edades es la guía?</div>
+                <div class="faq-answer">La guía está diseñada para niños de 0 a 4 años, organizada por rangos de edad.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><span style="margin-right: 15px;">📱</span> ¿En qué formato viene?</div>
+                <div class="faq-answer">Es un ebook en formato PDF descargable inmediatamente después de la compra.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><span style="margin-right: 15px;">🛡️</span> ¿Tiene garantía?</div>
+                <div class="faq-answer">Sí. Tienes 7 días para solicitar un reembolso completo si no estás satisfecha.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="comprar" class="container">
+        <div class="checkout-box">
+            <div class="checkout-info">
+                <h2 style="text-align: left; margin-bottom: 20px;">¡Empieza hoy mismo! 👨‍👩‍👧‍👦</h2>
+                <ul style="list-style: none; padding: 0; color: #576574; font-size: 1.1rem; line-height: 2;">
+                    <li>✅ Guía Completa de Estimulación</li>
+                    <li>✅ Bono: Kit Imprimible de Actividades</li>
+                    <li>✅ Bono: Guía de Errores Comunes</li>
+                    <li>✅ Bono: Plan de Acción 30 días</li>
+                    <li>✅ Acceso de por vida</li>
+                </ul>
+            </div>
+            <div class="checkout-price">
+                <div class="offer-badge">¡60% DE DESCUENTO HOY!</div>
+                <span class="old-price">Antes $47.00 USD</span>
+                <div class="price-tag">$17.99</div>
+                <a href="TU_LINK_DE_PAGO" class="cta-btn" style="font-size: 1.2rem; padding: 20px;">¡LO QUIERO TODO! 🛒</a>
+                <div style="margin-top: 20px; font-size: 0.85rem; color: #7f8c8d; display: flex; justify-content: center; gap: 15px;">
+                    <span>🛡️ Pago Seguro</span>
+                    <span>⭐ EXCELENTE CALIDAD</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: #95a5a6; font-size: 0.9rem;">
+        <p>Hecho con ❤️ para el futuro de tus pequeños. &copy; 2026</p>
+    </footer>
 
 </body>
 </html>
